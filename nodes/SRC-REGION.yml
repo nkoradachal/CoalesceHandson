@@ -1,0 +1,63 @@
+steps:
+  REGION-c1ca5c7d-e0b2-4ad5-afd8-237cdb1eca82:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Region data as defined by TPC-H
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f6085a9b-dc1a-42a0-976b-cfaee7366024
+              stepCounter: c1ca5c7d-e0b2-4ad5-afd8-237cdb1eca82
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 228debd4-cdcb-4ac2-bdc7-a564c16c035d
+              stepCounter: c1ca5c7d-e0b2-4ad5-afd8-237cdb1eca82
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: R_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c723ef5b-04ff-4f74-a41a-7dde215369c5
+              stepCounter: c1ca5c7d-e0b2-4ad5-afd8-237cdb1eca82
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'REGION') }}
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: c1ca5c7d-e0b2-4ad5-afd8-237cdb1eca82
